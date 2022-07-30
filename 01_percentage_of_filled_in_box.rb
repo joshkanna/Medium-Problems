@@ -4,19 +4,13 @@ def percent_filled(argument)
 	amnt_filled = 0
 	amnt_empty = 0
 	for item in argument
-		for i in item.split("")
-			if i == "o"
-				amnt_filled +=1
-			elsif i == " "
-				amnt_empty +=1
-			end
+		if item.include?(" ") || item.include?('o')
+			amnt_filled += item.count('o')
+			amnt_empty += item.count(' ')
 		end
 	end
 	denominator = amnt_empty+amnt_filled
-	fraction = amnt_filled/denominator.to_f
-	percentage = (fraction*100).to_i
-	ans = String(percentage)+"%"
-
+	ans = "#{amnt_filled*100/denominator}%"
 	ans
 end
 
