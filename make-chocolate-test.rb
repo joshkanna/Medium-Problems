@@ -8,7 +8,7 @@ class MakeChocolate < Minitest::Test
 		assert_equal -1, make_chocolate(4,0,9)
 	end
 
-	# as big bars are used before small bars, having no big bats would resul tin an error
+	# as big bars are used before small bars, having no big bars would result in an error
 
 	def test_goal_of_9
 		assert_equal 4, make_chocolate(4,1,9)
