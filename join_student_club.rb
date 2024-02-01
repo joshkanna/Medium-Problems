@@ -32,3 +32,5 @@ def expected_value(game_one, game_two, runs)
 end
 
 expected_value([5, 6], [5, 5], 100_000)
+
+# Game one is more advantageous
